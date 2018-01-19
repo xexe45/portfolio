@@ -5,6 +5,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import {AboutComponent,PortafolioComponent,ItemComponent} from './components/index.paginas';
 import {app_routing} from './app.route';
+import {InformacionService} from './services/informacion.service';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,9 +18,10 @@ import {app_routing} from './app.route';
   ],
   imports: [
     BrowserModule,
-    app_routing
+    app_routing,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [InformacionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
