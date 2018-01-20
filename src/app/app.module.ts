@@ -6,6 +6,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import {AboutComponent,PortafolioComponent,ItemComponent} from './components/index.paginas';
 import {app_routing} from './app.route';
 import {InformacionService} from './services/informacion.service';
+import {ProductosService} from './services/productos.service';
 import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
@@ -21,7 +22,9 @@ import { HttpClientModule } from '@angular/common/http';
     app_routing,
     HttpClientModule
   ],
-  providers: [InformacionService],
+  providers: [InformacionService,
+  ProductosService
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

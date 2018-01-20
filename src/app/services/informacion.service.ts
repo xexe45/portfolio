@@ -24,7 +24,7 @@ export class InformacionService {
    public cargaSobreNosotros(){
      this.http.get("https://heroesapp-1ab0c.firebaseio.com/equipo.json")
        .subscribe((data:any) => {
-         console.log(data);
+         //console.log(data);
          this.cargadaSobre = true;
          this.equipo = data;
        })
