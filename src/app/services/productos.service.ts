@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable()
 export class ProductosService {
   productos:any = [];
-  cargando_productos = false;
+  cargando_productos = true;
   constructor(private http:HttpClient) {
     this.cargar_productos();
   }
