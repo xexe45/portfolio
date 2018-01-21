@@ -18,7 +18,12 @@ export class ProductosService {
           console.log(this.cargando_productos);
           this.productos = res;
 
-        })
+        });
+  }
+
+  public cargar_producto(codigo:string){
+    return this.http.get(`https://heroesapp-1ab0c.firebaseio.com/productos/${codigo}.json`);
+
   }
 
 }
