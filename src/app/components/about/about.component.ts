@@ -7,7 +7,7 @@ import {InformacionService} from '../../services/informacion.service';
 })
 export class AboutComponent implements OnInit {
 
-  constructor(private service:InformacionService) { }
+  constructor(public service:InformacionService) { }
 
   ngOnInit() {
   }

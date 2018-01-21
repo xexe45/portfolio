@@ -10,7 +10,7 @@ export class SearchComponent implements OnInit {
   termino:string = undefined;
 
   constructor(private route:ActivatedRoute,
-              private _prd:ProductosService) {
+              public _prd:ProductosService) {
 
     route.params.subscribe(parametros => {
       this.termino = parametros['termino'];

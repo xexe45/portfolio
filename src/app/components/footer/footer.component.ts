@@ -8,7 +8,7 @@ import {InformacionService} from '../../services/informacion.service';
 })
 export class FooterComponent implements OnInit {
   private year:number;
-  constructor(private _service:InformacionService) {
+  constructor(public _service:InformacionService) {
     this.year = new Date().getFullYear();
   }
 
