@@ -10,12 +10,14 @@ export class ProductosService {
   }
 
   public cargar_productos(){
-      this.cargando_productos = true;
+      //this.cargando_productos = true;
       this.http.get('https://heroesapp-1ab0c.firebaseio.com/productos_idx.json')
         .subscribe(res => {
           console.log(res);
-          this.productos = res;
           this.cargando_productos = false;
+          console.log(this.cargando_productos);
+          this.productos = res;
+
         })
   }
 
